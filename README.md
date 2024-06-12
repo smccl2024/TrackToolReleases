@@ -1,9 +1,9 @@
 # TrackToolReleases
 Production Releases for Track Tool Application
 
-# Latest Changelog for v1.4.0
+## Latest Changelog for v1.4.0
 
-## New Features
+### New Features
 - **Display Track on Map**: Tracks are now displayed on the map with markers at each recorded point.
 - **Join Points with Straight Line**: Connected all track points with straight lines for better visualization.
 - **Interpolated Smooth Curve**: Added functionality to interpolate and create a smooth curve between track points for a more accurate representation.
@@ -12,14 +12,14 @@ Production Releases for Track Tool Application
 - **Calculate Look Ahead**: Added look-ahead calculation to predict future positions based on current trajectory and speed.
 - **Save Track with Correct Checksum**: Tracks are now saved with a correct checksum to ensure data integrity and prevent corruption.
 
-## Enhancements
+### Enhancements
 - Improved the accuracy and performance of the track rendering on the map.
 - Enhanced the user interface for better usability and visualization of track data.
 
-## Bug Fixes
+### Bug Fixes
 - Fixed various minor bugs related to track data handling and display.
 
-## Technical Improvements
+### Technical Improvements
 - Refactored codebase to improve maintainability and performance.
 - Optimized algorithms for better efficiency in handling and processing track data.
 
