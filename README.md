@@ -15,7 +15,11 @@ Production Releases for Track Tool Application
 #### Bug Fix
 - Fixed issue caused by Coordinates precision being more than 8 decimals
 
-## Changelog v1.4.1
+## Changelog for v1.4.1
+#### Bug Fixes
+- Fixed various minor bugs related to track data handling and display.
+
+## Changelog v1.4.0
 #### New Features
 - **Display Track on Map**: Tracks are now displayed on the map with markers at each recorded point.
 - **Join Points with Straight Line**: Connected all track points with straight lines for better visualization.
