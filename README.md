@@ -1,9 +1,20 @@
 # TrackToolReleases
 Production Releases for Track Tool Application
 
-## Latest Changelog uptill v1.4.1
 
-### New Features
+# Release notes uptill v1.4.4
+## Changelog v1.4.4
+#### New Feature
+- Added a output verification mechanism to ensure that saved coordinates reflect the correct track requirements even if generate is not pressed prior , addressing issues where handleSave would always save Coordinates in current state.
+
+#### Bug Fix
+- Fixed various minor bugs related to track data handling and display.
+
+#### Technical Improvements
+- Added Compatibility with Linux for distribution
+
+## Changelog v1.4.1
+#### New Features
 - **Display Track on Map**: Tracks are now displayed on the map with markers at each recorded point.
 - **Join Points with Straight Line**: Connected all track points with straight lines for better visualization.
 - **Interpolated Smooth Curve**: Added functionality to interpolate and create a smooth curve between track points for a more accurate representation.
