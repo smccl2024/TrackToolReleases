@@ -3,13 +3,13 @@ Production Releases for Track Tool Application
 
 
 # Release notes uptill v1.4.6
-## Changelog for v1.4.6
+## Changelog v1.4.6
 #### Bug Fix
 - Resolved an issue with the win-x64 application where myapp.exe was not properly linked to the standard C++ Runtime Library. Added the necessary DLL dependencies to ensure correct functionality.
 #### Technical Improvements
 - Improved input handling by specifying input types as numbers, preventing the occurrence of NaN (Not a Number) errors.
 
-## Changelog for v1.4.5
+## Changelog v1.4.5
 #### New Feature
 - A progress bar feature has been integrated into the application. This enhancement improves user experience by providing real-time feedback on the status of resampling.
 #### Bug Fix
