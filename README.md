@@ -2,7 +2,13 @@
 Production Releases for Track Tool Application
 
 
-# Release notes uptill v1.4.4
+# Release notes uptill v1.4.5
+## Changelog for v1.4.5
+#### New Feature
+- A progress bar feature has been integrated into the application. This enhancement improves user experience by providing real-time feedback on the status of resampling.
+#### Bug Fix
+- An issue affecting the application's compliance with Linux systems has been resolved.
+- 
 ## Changelog v1.4.4
 #### New Feature
 - Added a output verification mechanism to ensure that saved coordinates reflect the correct track requirements even if generate is not pressed prior , addressing issues where handleSave would always save Coordinates in current state.
