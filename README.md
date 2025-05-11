@@ -1,5 +1,15 @@
 # TrackEdit Production Release
 
+# v1.5.1
+
+### Bug Fix
+- Solved bug which prohibited opening file which doesn't have danger and event file. Now throws an alert before continuing to open just track file by itselves 
+
+### Technical Improvements
+- Seperated Update feature as a component of itselves from Home page
+- Improved CSS for Home page for different screen aspect
+- Refactored code for macOS build 
+
 # v1.5.0
 
 ### New features
