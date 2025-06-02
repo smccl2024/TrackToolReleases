@@ -1,5 +1,20 @@
 # TrackEdit Production Release
 
+# v1.5.2
+
+### New features
+- Visualization Page layout can be resized.
+- Added markers for data3 and stop line on the track.
+- New event types added for Visualization 
+
+### Bug Fix
+- Solved bug which prohibited opening event file with json format. 
+
+### Technical Improvements
+- Improved CSS and animation for Visualization
+- Changed colour palette to distinguish overlapping event better
+- Event index matched with EventJsonCreator
+
 # v1.5.1
 
 ### Bug Fix
