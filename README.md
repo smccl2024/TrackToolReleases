@@ -1,6 +1,47 @@
-# TrackEdit Production Release
+# TrackTool Release notes
 
-# v1.5.2
+# v1.6.0 - LTS
+
+### New features
+
+- **CreateTracks Page**:  Paths (DZ) can be created from scratch anywhere on the map.
+- **DangerZones Page**:  DangerZones can now be loaded and edited easily on the map.
+- Search bar added to Map to navigate to a place using name, post codes, landmarks.
+
+### Technical Improvements
+
+- MapBox Component seperated from map container and div, only used for visualization
+- Editing coordinated moved to parent comp of Mapbox to avoid muatating behind parent. 
+- Save uses flag to distinguish track from DZ while save
+
+### Enhancements
+ 
+ - Map resizes to full when vertical seperater doublclicked
+ - Pop up appears and stays on hover 
+ - Speed Graph units changed to mph
+ - Track Edit page Icon changed
+ - Lane Change flag colour changed for better visibility
+
+ ### Bug Fix
+
+ - Added missing dll for C++ executable 
+ - Fixed .csv extension for Filepath during saving in Linux
+ - Fixed Speed and LAD data during Saving 
+ - Flushed events column during saving to avoid data overflow after resampling.
+
+
+
+
+
+
+# v1.5.XX
+<details>
+
+<summary><i>Click to see all <i></summary>
+
+## v1.5.2
+<details>
+<summary>click to see changelog</summary>
 
 ### New features
 - Visualization Page layout can be resized.
@@ -14,8 +55,11 @@
 - Improved CSS and animation for Visualization
 - Changed colour palette to distinguish overlapping event better
 - Event index matched with EventJsonCreator
+</details>
 
-# v1.5.1
+## v1.5.1
+<details>
+<summary>click to see changelog</summary>
 
 ### Bug Fix
 - Solved bug which prohibited opening file which doesn't have danger and event file. Now throws an alert before continuing to open just track file by itselves 
@@ -24,8 +68,11 @@
 - Seperated Update feature as a component of itselves from Home page
 - Improved CSS for Home page for different screen aspect
 - Refactored code for macOS build 
+</details>
 
-# v1.5.0
+## v1.5.0
+<details>
+<summary>click to see changelog</summary>
 
 ### New features
 
@@ -54,8 +101,10 @@
 - File chooser component takes icon and proceedto as additional inputs increasing reusability
 
 ---
+</details>
+</details>
 
-
+</br>
 
 # v1.4.XX
 
