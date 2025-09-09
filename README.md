@@ -1,6 +1,25 @@
 # TrackTool Release notes
 
-# v1.6.0 - LTS
+## v1.6.1 - LTS 
+
+### New features
+- New Tracks can be created from TrackFile Page directly without needing to select file
+- New Danger Zones can be created from DangerZones Page directly without needing to select file
+
+### Added 
+- Added Edit Track button to DangerZone Page
+- Added Edit DZones button to DangerZone Page
+- Added View Track button to DangerZone Page
+- Added View DZones button to DangerZone Page
+- Added Clear/Erase button to DangerZone Page
+
+### Technical Improvements
+
+- Optional Original data prop created for DataGraph component
+- Create Track Page feature combined with Trackfile and DangerZones page to for better usability 
+- General Visualization Enhancement
+
+## v1.6.0 - Stable LTS
 
 ### New features
 
@@ -11,7 +30,7 @@
 ### Technical Improvements
 
 - MapBox Component seperated from map container and div, only used for visualization
-- Editing coordinated moved to parent comp of Mapbox to avoid muatating behind parent. 
+- Editing coordinated moved to parent comp of Mapbox to avoid mutating behind parent. 
 - Save uses flag to distinguish track from DZ while save
 
 ### Enhancements
