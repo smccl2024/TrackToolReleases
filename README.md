@@ -1,6 +1,37 @@
 # TrackTool Release notes
 
-## v1.6.1 - LTS 
+## v1.6.2 - LTS
+
+### New features
+
+- **FlagFile Page** : This page allows the user to make and or edit flag file and run the EventJsonCreator to create the .danger and .event file. Events and dangerzones can be dynamically loaded and visualized on the map.
+
+### Technical Improvements
+
+- Removed Prop drilling for file selection and csvData.
+- Speed Algorithm Changed to match original speed calculation of track tool.
+- Refactored resampling/divide function to increase performance.
+- Progress value IPC event emitter and listener added.
+- Moved Track opening for Visualize within the Component.
+- file ref cleared after selection
+- Speed, heading and LAD calculation on resample over coordinates to improve performace
+- EventJsonCreator.txt copied and moved to trackfile directory after batch file run completes
+
+### Enhancement
+
+- Scaled window with DPI factor
+- Speed up Fly to when opening track and dz on map.
+- Progress bar animates with actual value when running resampling/Event Creation and EventJsonCreator log on Hide/Show button
+- Danger Zones now have a default thickness of 2.18m when shown on the map for realistic view
+
+### Added
+
+- Added Layer Legends with Visibility toggle on Track and DangerZones Page
+- Added Original Track and Generated Track layers to Map
+
+## v1.6.1 
+<details>
+<summary>click to see changelog</summary>
 
 ### New features
 - New Tracks can be created from TrackFile Page directly without needing to select file
@@ -18,8 +49,12 @@
 - Optional Original data prop created for DataGraph component
 - Create Track Page feature combined with Trackfile and DangerZones page to for better usability 
 - General Visualization Enhancement
+</details>
 
-## v1.6.0 - Stable LTS
+## v1.6.0
+
+<details>
+<summary>click to see changelog</summary>
 
 ### New features
 
@@ -47,6 +82,8 @@
  - Fixed .csv extension for Filepath during saving in Linux
  - Fixed Speed and LAD data during Saving 
  - Flushed events column during saving to avoid data overflow after resampling.
+
+</details>
 
 
 
