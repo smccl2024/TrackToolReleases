@@ -1,6 +1,48 @@
 # TrackTool Release notes
 
-## v1.6.2 - LTS
+# v1.7.0
+
+
+### New Features
+
+- **Track & DangerZone Offset Mode** – Added the ability to offset both track and danger zones with full transition control. Users can visualize offset adjustments interactively on the map.  
+- **FlagFile Save As & Relative Path** – Introduced “Save As” functionality for flag files, allowing saving with **relative paths** for better reproducibility when running `EventJsonCreator`.  
+- **FlagFile Page Update (Obs v12.9)** – The FlagFile Editor page now supports **Obstacle Software version 12.9**, providing compatibility with the latest json event formats.  
+- **DangerZone JSON Popup** – Each DangerZone now includes a **popup display** that reveals JSON details for quick inspection.  
+- **TTC Highlighting** – DangerZones with **TTC (Time To Collision)** enabled are now automatically highlighted for better visibility on the map.  
+
+### Technical Improvements
+
+- Re-implemented **offset tracker** for profile calculations with improved accuracy.  
+- Added **loop safety** and edge condition checks for offset computations.  
+- Refactored **DangerZone ApplyOffset** and offset functions for better usability and maintainability.  
+- Added **non-blocking toast notifications** to replace blocking alert messages, improving workflow smoothness.  
+- Added **inline cell editing** in the FlagFile table to prevent unnecessary re-renders during edits.  
+- Added **log file relocation** to the track directory after batch runs for consistent output management.  
+
+### Bug Fixes
+
+- Fixed boundary detection in **event start/end limit detector** and flag file validity checks.  
+- Fixed **flag file start and end bound limits** to prevent incorrect indexing during offset operations.  
+- Removed **layer legend duplication** after resampling.  
+- Fixed edge case handling when track start or end points matched boundary conditions.  
+- Fixed Progress bar Modal vissibility when re-running EventCreator  
+
+</details>
+
+</br>
+
+
+# v1.6.XX
+
+<details>
+
+<summary><i>Click to see all </i></summary>
+
+## v1.6.2
+
+<details>
+<summary>click to see changelog</summary>
 
 ### New features
 
@@ -29,15 +71,20 @@
 - Added Layer Legends with Visibility toggle on Track and DangerZones Page
 - Added Original Track and Generated Track layers to Map
 
-## v1.6.1 
+</details>
+
+## v1.6.1
+
 <details>
 <summary>click to see changelog</summary>
 
 ### New features
+
 - New Tracks can be created from TrackFile Page directly without needing to select file
 - New Danger Zones can be created from DangerZones Page directly without needing to select file
 
-### Added 
+### Added
+
 - Added Edit Track button to DangerZone Page
 - Added Edit DZones button to DangerZone Page
 - Added View Track button to DangerZone Page
@@ -47,8 +94,9 @@
 ### Technical Improvements
 
 - Optional Original data prop created for DataGraph component
-- Create Track Page feature combined with Trackfile and DangerZones page to for better usability 
+- Create Track Page feature combined with Trackfile and DangerZones page to for better usability
 - General Visualization Enhancement
+
 </details>
 
 ## v1.6.0
@@ -58,105 +106,114 @@
 
 ### New features
 
-- **CreateTracks Page**:  Paths (DZ) can be created from scratch anywhere on the map.
-- **DangerZones Page**:  DangerZones can now be loaded and edited easily on the map.
+- **CreateTracks Page**: Paths (DZ) can be created from scratch anywhere on the map.
+- **DangerZones Page**: DangerZones can now be loaded and edited easily on the map.
 - Search bar added to Map to navigate to a place using name, post codes, landmarks.
 
 ### Technical Improvements
 
 - MapBox Component seperated from map container and div, only used for visualization
-- Editing coordinated moved to parent comp of Mapbox to avoid mutating behind parent. 
+- Editing coordinated moved to parent comp of Mapbox to avoid mutating behind parent.
 - Save uses flag to distinguish track from DZ while save
 
 ### Enhancements
- 
- - Map resizes to full when vertical seperater doublclicked
- - Pop up appears and stays on hover 
- - Speed Graph units changed to mph
- - Track Edit page Icon changed
- - Lane Change flag colour changed for better visibility
 
- ### Bug Fix
+- Map resizes to full when vertical seperater doublclicked
+- Pop up appears and stays on hover
+- Speed Graph units changed to mph
+- Track Edit page Icon changed
+- Lane Change flag colour changed for better visibility
 
- - Added missing dll for C++ executable 
- - Fixed .csv extension for Filepath during saving in Linux
- - Fixed Speed and LAD data during Saving 
- - Flushed events column during saving to avoid data overflow after resampling.
+### Bug Fix
+
+- Added missing dll for C++ executable
+- Fixed .csv extension for Filepath during saving in Linux
+- Fixed Speed and LAD data during Saving
+- Flushed events column during saving to avoid data overflow after resampling.
 
 </details>
+</details>
 
-
-
-
-
+</br>
 
 # v1.5.XX
+
 <details>
 
-<summary><i>Click to see all <i></summary>
+<summary><i>Click to see all </i></summary>
 
 ## v1.5.2
+
 <details>
 <summary>click to see changelog</summary>
 
 ### New features
+
 - Visualization Page layout can be resized.
 - Added markers for data3 and stop line on the track.
-- New event types added for Visualization 
+- New event types added for Visualization
 
 ### Bug Fix
-- Solved bug which prohibited opening event file with json format. 
+
+- Solved bug which prohibited opening event file with json format.
 
 ### Technical Improvements
+
 - Improved CSS and animation for Visualization
 - Changed colour palette to distinguish overlapping event better
 - Event index matched with EventJsonCreator
 </details>
 
 ## v1.5.1
+
 <details>
 <summary>click to see changelog</summary>
 
 ### Bug Fix
-- Solved bug which prohibited opening file which doesn't have danger and event file. Now throws an alert before continuing to open just track file by itselves 
+
+- Solved bug which prohibited opening file which doesn't have danger and event file. Now throws an alert before continuing to open just track file by itselves
 
 ### Technical Improvements
+
 - Seperated Update feature as a component of itselves from Home page
 - Improved CSS for Home page for different screen aspect
-- Refactored code for macOS build 
+- Refactored code for macOS build
 </details>
 
 ## v1.5.0
+
 <details>
 <summary>click to see changelog</summary>
 
 ### New features
 
-- **Visualizer Page**:  Tracks along with events and danger data can now be visualized easily on the map, with individual lengend to toggle visibility.
+- **Visualizer Page**: Tracks along with events and danger data can now be visualized easily on the map, with individual lengend to toggle visibility.
 - **Auto Update**: Updates are now rolled over the air which allows downloading and installation of new app versions if available
 
-### Added 
+### Added
 
 - Added Event and Danger component with unified GeoJSON source for efficient rendering
-- Added Legend component that can be reused 
+- Added Legend component that can be reused
 - Added map fly and slow zoom when Visualizer loads
-- Danger zones highlights with pop up showing zone id when clicked 
+- Danger zones highlights with pop up showing zone id when clicked
 - Event are classified by different colour and width to show overlap if any
 - File parser added to allow auto selection of .danger and .event file when corresponding track file is loaded into Visualizer
 
-### Enhancement 
+### Enhancement
 
 - Min-Max slider value changed for resampling and speed curve smoothing
 - README.md changed to show app versions on top level
-- Removed bezier spline source for visualization to  reduce computation load
+- Removed bezier spline source for visualization to reduce computation load
 
 ### Technical Improvements
+
 - App zoom scale fixed to 100% and is independant from default settings
-- App id changed 
+- App id changed
 - Cleanup on Component unmount
 - File chooser component takes icon and proceedto as additional inputs increasing reusability
 
 ---
+
 </details>
 </details>
 
@@ -166,7 +223,7 @@
 
 <details>
 
-<summary><i>Click to see all <i></summary>
+<summary><i>Click to see all </i></summary>
 
 ## v1.4.7
 
@@ -180,6 +237,7 @@
 - Dev options removed after app packaged
 
 ### Bug Fix
+
 - Solved csv recreation issue after hitting save. Uses state variable to set lad, speed and flag 1 column
 
 </details>
