@@ -1,37 +1,70 @@
 # TrackTool Release notes
 
-# v1.7.0
-
+# v1.7.2
 
 ### New Features
 
-- **Track & DangerZone Offset Mode** – Added the ability to offset both track and danger zones with full transition control. Users can visualize offset adjustments interactively on the map.  
-- **FlagFile Save As & Relative Path** – Introduced “Save As” functionality for flag files, allowing saving with **relative paths** for better reproducibility when running `EventJsonCreator`.  
-- **FlagFile Page Update (Obs v12.9)** – The FlagFile Editor page now supports **Obstacle Software version 12.9**, providing compatibility with the latest json event formats.  
-- **DangerZone JSON Popup** – Each DangerZone now includes a **popup display** that reveals JSON details for quick inspection.  
-- **TTC Highlighting** – DangerZones with **TTC (Time To Collision)** enabled are now automatically highlighted for better visibility on the map.  
+- **Flag Transfer on Save** – Flags, speed limits, and related data can now be transferred directly from the TrackFile page when editing is completed and saved.
+- **Regenerate Flag Data** – Added the ability to recreate flag file data using existing track, `.event`, and `.danger` files.
+- **Predicted Offset Preview** – Introduced a predicted offset layer to visually preview offset changes before applying them permanently to track coordinates.
+- **Event Row Visibility Toggle** – Added show/hide functionality for individual event rows in the FlagFile editor with a sticky header for better navigation.
 
 ### Technical Improvements
 
-- Re-implemented **offset tracker** for profile calculations with improved accuracy.  
-- Added **loop safety** and edge condition checks for offset computations.  
-- Refactored **DangerZone ApplyOffset** and offset functions for better usability and maintainability.  
-- Added **non-blocking toast notifications** to replace blocking alert messages, improving workflow smoothness.  
-- Added **inline cell editing** in the FlagFile table to prevent unnecessary re-renders during edits.  
-- Added **log file relocation** to the track directory after batch runs for consistent output management.  
+- Minor **speed profile corrections** near the end of the curve.
+- Refactored **heading calculation** and applied smoothing to Look Ahead Distance (LAD) to reduce noise from bearing values.
+- Separated Offset transition **easing logic from Vmax calculations** to improve maintainability and correctness.
+- Restored **original track parameter inputs** for improved editing flexibility.
+- Corrected **danger file extension handling**.
+- General code refactoring and cleanup across offset and speed-related logic.
+
+### Enhancements
+
+- UI improvements with refined layout structure.
+- Applied **resizable layouts across all pages** using flex-based and relative positioning.
+- Allowed controlled overflow for right-hand side panels.
+- Added **Globe Spinner** component for improved loading feedback.
+
+
+</br>
+
+# v1.7.1
 
 ### Bug Fixes
 
-- Fixed boundary detection in **event start/end limit detector** and flag file validity checks.  
-- Fixed **flag file start and end bound limits** to prevent incorrect indexing during offset operations.  
-- Removed **layer legend duplication** after resampling.  
-- Fixed edge case handling when track start or end points matched boundary conditions.  
-- Fixed Progress bar Modal vissibility when re-running EventCreator  
+- Fixed CSV headers cheker when laoding track
+- Fixed FlagFile DZ selector
+
+# v1.7.0
+
+### New Features
+
+- **Track & DangerZone Offset Mode** – Added the ability to offset both track and danger zones with full transition control. Users can visualize offset adjustments interactively on the map.
+- **FlagFile Save As & Relative Path** – Introduced “Save As” functionality for flag files, allowing saving with **relative paths** for better reproducibility when running `EventJsonCreator`.
+- **FlagFile Page Update (Obs v12.9)** – The FlagFile Editor page now supports **Obstacle Software version 12.9**, providing compatibility with the latest json event formats.
+- **DangerZone JSON Popup** – Each DangerZone now includes a **popup display** that reveals JSON details for quick inspection.
+- **TTC Highlighting** – DangerZones with **TTC (Time To Collision)** enabled are now automatically highlighted for better visibility on the map.
+
+### Technical Improvements
+
+- Re-implemented **offset tracker** for profile calculations with improved accuracy.
+- Added **loop safety** and edge condition checks for offset computations.
+- Refactored **DangerZone ApplyOffset** and offset functions for better usability and maintainability.
+- Added **non-blocking toast notifications** to replace blocking alert messages, improving workflow smoothness.
+- Added **inline cell editing** in the FlagFile table to prevent unnecessary re-renders during edits.
+- Added **log file relocation** to the track directory after batch runs for consistent output management.
+
+### Bug Fixes
+
+- Fixed boundary detection in **event start/end limit detector** and flag file validity checks.
+- Fixed **flag file start and end bound limits** to prevent incorrect indexing during offset operations.
+- Removed **layer legend duplication** after resampling.
+- Fixed edge case handling when track start or end points matched boundary conditions.
+- Fixed Progress bar Modal vissibility when re-running EventCreator
 
 </details>
 
 </br>
-
 
 # v1.6.XX
 
