@@ -5,18 +5,27 @@
 ### New Features
 
 - **Flag Transfer on Save** – Flags, speed limits, and related data can now be transferred directly from the TrackFile page when editing is completed and saved.
-- **Regenerate Flag Data** – Added the ability to recreate flag file data using existing track, `.event`, and `.danger` files.
 - **Predicted Offset Preview** – Introduced a predicted offset layer to visually preview offset changes before applying them permanently to track coordinates.
+- **Speed Limit Computation** – Recalculate global speed profile based on min and max speed limits.
+- **Local Speed Limits** – Speed can be recomputed over local region using JSON params (a_lat_max, a_long_max and a_dec_max) for fine grained control.
+
+### Added
+
+- **Regenerate Flag Data** – Added the ability to recreate flag file data using existing track, `.event`, and `.danger` files.
 - **Event Row Visibility Toggle** – Added show/hide functionality for individual event rows in the FlagFile editor with a sticky header for better navigation.
+- **Speed Limit Editing Table** – Editable speed limit table with Saving support directly from the UI.
+- **TrackFile Location Display** – TrackFile location is now shown at the top of the map, with current paths for DangerZones and Flag files displayed in the right panel.
 
 ### Technical Improvements
 
 - Minor **speed profile corrections** near the end of the curve.
 - Refactored **heading calculation** and applied smoothing to Look Ahead Distance (LAD) to reduce noise from bearing values.
 - Separated Offset transition **easing logic from Vmax calculations** to improve maintainability and correctness.
+- Refactored for local speed calculation logic and resolved rounding errors in bearing return.
 - Restored **original track parameter inputs** for improved editing flexibility.
 - Corrected **danger file extension handling**.
-- General code refactoring and cleanup across offset and speed-related logic.
+- General code refactoring and clean-up across offset and speed-related logic.
+- Downgrade update feature (dev mode only) for alpha and beta channels testing
 
 ### Enhancements
 
@@ -24,7 +33,6 @@
 - Applied **resizable layouts across all pages** using flex-based and relative positioning.
 - Allowed controlled overflow for right-hand side panels.
 - Added **Globe Spinner** component for improved loading feedback.
-
 
 </br>
 
