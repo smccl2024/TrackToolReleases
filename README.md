@@ -1,5 +1,30 @@
 # TrackTool Release notes
 
+
+# v1.7.3
+
+### New Features 
+
+- **DangerZones Translation and Rotation** - Zones can be translated along rhumb line to north, south, east and west with respect to geopgraphical north, Zones can also be rotated along its centroid 
+
+### Added
+- Added predicted offset line display for Overtake event 
+
+### Techincal Improvements
+- Updated **flag_transfer** binary with JSON parsing for speed file
+- Updated **EventJsonCreator** binary with validation for action point location
+- DangerZone location validation while flagfile editing 
+
+### Bug Fixes
+- Action point location validation bounds to start and end of an event
+- Relative flag for Busstop event now accepeted
+- Flag File progress bar bug in opening modal 
+- DangerZones prediction and actual offset matching
+- Waypoint Creation/Editing hidden if file not loaded
+- Progress bar display on re running EventJsonCreator over same flag file
+
+
+
 # v1.7.2
 
 ### New Features
