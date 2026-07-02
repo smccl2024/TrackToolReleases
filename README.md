@@ -1,14 +1,52 @@
 # TrackTool Release notes
 
 
+# v1.7.4
+
+<summary>click to see changelog</summary>
+
+### New Features
+
+- **SpeedFile Page** – Added a dedicated page for loading, editing and managing speed limit files.
+- **Kinematics JSON Creator** – Added support for generating kinematics JSON along with integrated speed calculation.
+- **Track Straightening & Curving** – Introduced algorithms for creating straight and curved track sections with improved geometry generation.
+- **Configuration Parameter Loading** – Parameters can now be loaded directly from configuration files.
+
+### Added
+
+- **Management Only Flag** – Added support for management-only flags in the event list.
+- **Track Location Information** – Visualize page now displays additional track statistics and location information.
+
+### Technical Improvements
+
+- Refactored IPC communication by changing the `AskFlagTransfer` IPC call from `invoke` to `send/on`.
+- Removed speed limit functionality from the TrackFile page following the introduction of the dedicated SpeedFile page.
+- Replaced buffer generation with **JSTS** to produce flat end caps for more accurate DangerZone geometry.
+- Overtake event offset visualization now matches the configured **MaxAllowed** distance.
+- Improved handling of reversed offset selections by automatically swapping offset points internally.
+- General code cleanup and refactoring.
+
+### Bug Fixes
+
+- Fixed overlapping extended straight segments during track generation.
+- Added correct tail-end generation after circular sections.
+- Fixed Event layer loading when opening a new track.
+- Updated **EventJsonCreator** with stability and validation fixes.
+- Fixed various issues related to EventJsonCreator distance calculations and general application stability.
+
+
+</br>
+
+
 # v1.7.3
 
 ### New Features 
 
 - **DangerZones Translation and Rotation** - Zones can be translated along rhumb line to north, south, east and west with respect to geopgraphical north, Zones can also be rotated along its centroid 
 
+
 ### Added
-- Added predicted offset line display for Overtake event 
+- **Track Stats** - Visualize page display track length, avg. speed and time of travel
 
 ### Techincal Improvements
 - Updated **flag_transfer** binary with JSON parsing for speed file
