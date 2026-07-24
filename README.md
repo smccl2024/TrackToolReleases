@@ -1,9 +1,30 @@
 # TrackTool Release notes
 
 
+# v1.7.5
+
+### Added
+- **Acceleration LookAhead**: User Input Block added to TrackFile and SpeedFile page and KinematicsJsonCreator Updated to ingest this input on change
+
+### Technical Improvements
+- Flag File warning display time lowered by 2s
+- Electron package including V8 engine, node and npm packages upated to LTS stable for security and known vulnerabilitis 
+- File Chooser button refactored, with IPC based file loader over renderer touching the user system for security 
+- Improved the divide function for both Track and DangerZone, to be much faster 
+
+### Bug Fixes
+- Flag Transfer artificate replaced for json parsing bug
+- Heading Calculation shifted to original waypoint sample based
+- Fix React JS Focus back on editable cell when background runs 
+- Lat Lng swap when reversing the event file
+
+### Enhancements
+- Offset point gets cleared when a third point is selected or when track is resampled or processed
+- Current File path updates in the display when saved 
+
+
 # v1.7.4
 
-<summary>click to see changelog</summary>
 
 ### New Features
 
@@ -33,7 +54,6 @@
 - Fixed Event layer loading when opening a new track.
 - Updated **EventJsonCreator** with stability and validation fixes.
 - Fixed various issues related to EventJsonCreator distance calculations and general application stability.
-
 
 </br>
 
