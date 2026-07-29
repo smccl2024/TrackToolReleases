@@ -1,6 +1,23 @@
 # TrackTool Release notes
 
 
+# v1.7.6
+
+### Added
+- **SplineResolution**: User Input Block added to TrackFile page to change Bezeir spline resolution and generate smooth track
+
+### Bug Fixes
+- Spline resolution increased for resampling snaping error
+- Run EventJsonCreator progress check removed, Modal closes on process completion
+
+### Enhancements
+- DataGraph Zoom modes allows Ctrl + drag for non sqaure zoom type
+- Sampling button named changed for better understanding
+
+### Technical Improvements
+- npm package list updated
+- Update KinematicsJsonCreator
+
 # v1.7.5
 
 ### Added
