@@ -1,5 +1,13 @@
 # TrackTool Release notes
 
+# v1.7.7
+
+### Bug Fixes
+- **Profile Curving**: Northing Easting Projection mismatch rectified with WGS84 projection for closesness with Old tool
+- General UI bug fixe
+
+### Technical Improvements
+- Step changed for User Input 
 
 # v1.7.6
 
