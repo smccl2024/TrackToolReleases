@@ -1,55 +1,131 @@
 # TrackTool Release notes
 
-# v1.7.7
+# v1.8.0
+
+
+### New Features
+
+- **Undo & Redo** – Added undo and redo functionality for Track coordinate editing, including editing context such as local sampling ranges and offset points.
+
+- **Local Resampling** – Added the ability to select and resample a local section of a Track without affecting the entire Track. Local range boundaries are preserved during editing and Waypoint deletion.
+
+- **Interactive Speed Profile** – Added draggable speed graph functionality, allowing the speed profile to be modified interactively. Includes FlatRange support for Min/Max values and a toggle to enable or disable graph interaction.
+
+- **Speed Heatmap** – Added a speed heatmap layer to visualize speed variation along the Track.
+
+- **DangerZone Extend Start/End** – Added functionality to extend the start and end of DangerZones.
+
+### Added
+
+- **Enhanced Track Statistics** – Improved Visualize page statistics with user-defined dwell times, event counts and additional Track metrics.
+
+- Added configuration inputs for `spread_heading_calculation` and `spread_speed_floor` to the Kinematics JSON generation workflow.
+
+### Enhancements
+
+- Improved rendering performance to provide smoother visual feedback while editing Track coordinates.
+
+- Updated Map visualization opacity and layer ordering for improved visibility.
+
+- Speed and Flag file table input element covers entire width, so clicking anywhere should allow editing.
+
+- Flag file waypooint fields can now be populated by focusing the desired field and clicking a waypoint marker on the map.
+
+### Technical Improvements
+
+- Added a dedicated `History.ts` module for managing coordinate and editing-context history.
+
+- Removed Bezier interpolation from local Track sampling.
+
+- EventJsonCreator updated with faster processing built
 
 ### Bug Fixes
+
+- Fixed **Mapbox layer initialization** when map layers are created for the first time.
+
+- Fixed **Overtake Event** visualization.
+
+
+</br>
+
+# v1.7.XX
+
+<details>
+<summary><i>Click to see all </i></summary>
+
+## v1.7.7
+
+<details>
+<summary>click to see changelog</summary>
+
+### Bug Fixes
+
 - **Profile Curving**: Northing Easting Projection mismatch rectified with WGS84 projection for closesness with Old tool
 - General UI bug fixe
 
 ### Technical Improvements
-- Step changed for User Input 
 
-# v1.7.6
+- Step changed for User Input
+</details>
+
+## v1.7.6
+
+<details>
+<summary>click to see changelog</summary>
 
 ### Added
+
 - **SplineResolution**: User Input Block added to TrackFile page to change Bezeir spline resolution and generate smooth track
 
 ### Bug Fixes
+
 - Spline resolution increased for resampling snaping error
 - Run EventJsonCreator progress check removed, Modal closes on process completion
 
 ### Enhancements
+
 - DataGraph Zoom modes allows Ctrl + drag for non sqaure zoom type
 - Sampling button named changed for better understanding
 
 ### Technical Improvements
+
 - npm package list updated
 - Update KinematicsJsonCreator
+</details>
 
-# v1.7.5
+## v1.7.5
+
+<details>
+<summary>click to see changelog</summary>
 
 ### Added
+
 - **Acceleration LookAhead**: User Input Block added to TrackFile and SpeedFile page and KinematicsJsonCreator Updated to ingest this input on change
 
 ### Technical Improvements
+
 - Flag File warning display time lowered by 2s
-- Electron package including V8 engine, node and npm packages upated to LTS stable for security and known vulnerabilitis 
-- File Chooser button refactored, with IPC based file loader over renderer touching the user system for security 
-- Improved the divide function for both Track and DangerZone, to be much faster 
+- Electron package including V8 engine, node and npm packages upated to LTS stable for security and known vulnerabilitis
+- File Chooser button refactored, with IPC based file loader over renderer touching the user system for security
+- Improved the divide function for both Track and DangerZone, to be much faster
 
 ### Bug Fixes
+
 - Flag Transfer artificate replaced for json parsing bug
 - Heading Calculation shifted to original waypoint sample based
-- Fix React JS Focus back on editable cell when background runs 
+- Fix React JS Focus back on editable cell when background runs
 - Lat Lng swap when reversing the event file
 
 ### Enhancements
+
 - Offset point gets cleared when a third point is selected or when track is resampled or processed
-- Current File path updates in the display when saved 
+- Current File path updates in the display when saved
+</details>
 
+## v1.7.4
 
-# v1.7.4
-
+<details>
+<summary>click to see changelog</summary>
 
 ### New Features
 
@@ -80,35 +156,42 @@
 - Updated **EventJsonCreator** with stability and validation fixes.
 - Fixed various issues related to EventJsonCreator distance calculations and general application stability.
 
-</br>
+</details>
 
+## v1.7.3
 
-# v1.7.3
+<details>
+<summary>click to see changelog</summary>
 
-### New Features 
+### New Features
 
-- **DangerZones Translation and Rotation** - Zones can be translated along rhumb line to north, south, east and west with respect to geopgraphical north, Zones can also be rotated along its centroid 
-
+- **DangerZones Translation and Rotation** - Zones can be translated along rhumb line to north, south, east and west with respect to geopgraphical north, Zones can also be rotated along its centroid
 
 ### Added
+
 - **Track Stats** - Visualize page display track length, avg. speed and time of travel
 
 ### Techincal Improvements
+
 - Updated **flag_transfer** binary with JSON parsing for speed file
 - Updated **EventJsonCreator** binary with validation for action point location
-- DangerZone location validation while flagfile editing 
+- DangerZone location validation while flagfile editing
 
 ### Bug Fixes
+
 - Action point location validation bounds to start and end of an event
 - Relative flag for Busstop event now accepeted
-- Flag File progress bar bug in opening modal 
+- Flag File progress bar bug in opening modal
 - DangerZones prediction and actual offset matching
 - Waypoint Creation/Editing hidden if file not loaded
 - Progress bar display on re running EventJsonCreator over same flag file
 
+</details>
 
+## v1.7.2
 
-# v1.7.2
+<details>
+<summary>click to see changelog</summary>
 
 ### New Features
 
@@ -142,16 +225,24 @@
 - Allowed controlled overflow for right-hand side panels.
 - Added **Globe Spinner** component for improved loading feedback.
 
-</br>
+</details>
 
-# v1.7.1
+## v1.7.1
+
+<details>
+<summary>click to see changelog</summary>
 
 ### Bug Fixes
 
 - Fixed CSV headers cheker when laoding track
 - Fixed FlagFile DZ selector
 
-# v1.7.0
+</details>
+
+## v1.7.0
+
+<details>
+<summary>click to see changelog</summary>
 
 ### New Features
 
@@ -180,6 +271,7 @@
 
 </details>
 
+</details>
 </br>
 
 # v1.6.XX
