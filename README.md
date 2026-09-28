@@ -1,7 +1,15 @@
 # TrackTool Release notes
 
-# v1.8.0
+# v1.8.1
 
+### Bug Fixes
+- Fixed Overtake Line display direction opposite to input
+- Cleared div ref when clicked outside the solve for accidental input
+
+## v1.8.0
+
+<details>
+<summary>click to see changelog</summary>
 
 ### New Features
 
@@ -45,6 +53,7 @@
 
 - Fixed **Overtake Event** visualization.
 
+</details>
 
 </br>
 
