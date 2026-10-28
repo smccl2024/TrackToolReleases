@@ -1,10 +1,66 @@
 # TrackTool Release notes
 
-# v1.8.1
+# v1.9.0
+
+<!-- <details> -->
+<!-- <summary>click to see changelog</summary> -->
+
+### New Features
+
+- **FlagFile & SpeedFile Table Redesign** – Redesigned the FlagFile and SpeedFile editing tables to support the new JSON format. The updated layout provides a more concise and intuitive interface, improving readability and usability when editing event and speed parameters.
+
+- **Dynamic Event Parameter Editor** – Replaced the JSON column in the FlagFile table with a dedicated **Parameter** column. Parameters are now dynamically generated using `eventDefinition`, providing event-specific dropdown menus, editable values, and options to add or remove parameters without manually editing JSON structures.
+
+- **Vehicle Safety Margin Visualization** –  Visualization for the `reduceObstacleMargin` event, displaying the actual shuttle geometry and its surrounding safety margins. Colour-coded margin changes provide a visual representation of how the configured safety margins would appear in real-world scenarios.
+
+- **DangerZone Multi-Selection And Zones Table** – Select and Manage multiple DangerZones together, including loading zones directly from a FlagFile and managing them through a dedicated Zones table Section.
+
+- **MD5-based JSON Flag Transfer** – MD5 checksum mismatch detection when opening JSON FlagFiles, with options to transfer flags or continue opening the file. Flag transfer can automatically retrieve curated flag data.
+
+### Added
+
+- **JSON Metadata Validation** – Added metadata checks during JSON file loading to ensure compatibility and data integrity.
+- **DangerZone Editing Improvements** – Added right-click functionality to enter DangerZone editing mode, with dedicated Done and Exit buttons for improved editing control.
+- **Clear all** - Unified Clead All button functionality to clear all entries from the table
+
+### Enhancements
+
+- Improved DangerZone editing workflow with automatic exit from editing mode when creating a new DangerZone with unsaved changes.
+- Improved FileChooser dialogs with descriptive titles.
+- Improved File load button naming accross all pages to maintain symmetry and simplicity of intended behaviour.
+
+### Technical Improvements
+
+- Refactored File handling to support the new JSON document structure and metadata with backwards compatability.
+- Updated SpeedFile loading to retrieve base document information and metadata from `TrackEditJsonCreator`.
+- General code cleanup and refactoring across TrackFile, SpeedFile, FlagFile and DangerZone components.
+- Unified Kinematics JSON inputs between Save and Apply operations, eliminating the need to generate an intermediate `track.json` file.
 
 ### Bug Fixes
+
+- Fixed latitude and longitude recovery during JSON creation.
+- General Bug Fixes
+
+<!-- </details> -->
+
+</br>
+
+# v1.8.XX
+
+<details>
+<summary><i>Click to see all </i></summary>
+
+## v1.8.1
+
+<details>
+<summary>click to see changelog</summary>
+
+### Bug Fixes
+
 - Fixed Overtake Line display direction opposite to input
 - Cleared div ref when clicked outside the solve for accidental input
+
+</details>
 
 ## v1.8.0
 
@@ -53,6 +109,7 @@
 
 - Fixed **Overtake Event** visualization.
 
+</details>
 </details>
 
 </br>
