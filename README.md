@@ -1,17 +1,38 @@
 # TrackTool Release notes
 
+# v1.9.1
+
+<!-- <details>
+<summary>click to see changelog</summary> -->
+
+
+### Technical Improvements
+
+- **MD5 Full Validation** – Improved TrackFile integrity checks by validating the full MD5 checksum against the associated TrackFile.
+
+- **macOS & POSIX Compatibility** – Improved cross-platform compatibility by adding POSIX-compliant file and process handling for macOS and other POSIX-based systems.
+
+### Bug Fixes
+
+- Fixed potential loss of existing JSON data when overwriting combined JSON files.
+- Improved cross-platform compatibility for POSIX-based environments.
+
+<!-- </details> -->
+
+</br>
+
 # v1.9.0
 
-<!-- <details> -->
-<!-- <summary>click to see changelog</summary> -->
+<!-- <details>
+<summary>click to see changelog</summary> -->
 
 ### New Features
 
 - **FlagFile & SpeedFile Table Redesign** – Redesigned the FlagFile and SpeedFile editing tables to support the new JSON format. The updated layout provides a more concise and intuitive interface, improving readability and usability when editing event and speed parameters.
 
-- **Dynamic Event Parameter Editor** – Replaced the JSON column in the FlagFile table with a dedicated **Parameter** column. Parameters are now dynamically generated using `eventDefinition`, providing event-specific dropdown menus, editable values, and options to add or remove parameters without manually editing JSON structures.
+- **Dynamic Event Parameter Editor** – Replaced the JSON column in the FlagFile table with a dedicated **Parameter** column. Parameters are now dynamically generated using `eventDefinition.json`, providing event-specific dropdown menus, editable values, and options to add or remove parameters without manually editing JSON structures.
 
-- **Vehicle Safety Margin Visualization** –  Visualization for the `reduceObstacleMargin` event, displaying the actual shuttle geometry and its surrounding safety margins. Colour-coded margin changes provide a visual representation of how the configured safety margins would appear in real-world scenarios.
+- **Vehicle Safety Margin Visualization** – Visualization for the `reduceObstacleMargin` event, displaying the actual shuttle geometry and its surrounding safety margins. Colour-coded margin changes provide a visual representation of how the configured safety margins would appear in real-world scenarios.
 
 - **DangerZone Multi-Selection And Zones Table** – Select and Manage multiple DangerZones together, including loading zones directly from a FlagFile and managing them through a dedicated Zones table Section.
 
